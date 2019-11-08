@@ -1,0 +1,53 @@
+{
+  "name": "kumex-node-sdk",
+  "version": "1.0.2",
+  "description": "KuMEX API SDK for Node.js language",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Kucoin/kumex-node-sdk.git"
+  },
+  "main": "sdk/index.js",
+  "files": [
+    "sdk",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "PRODUCTION=false nodemon src/start.js",
+    "prod": "PRODUCTION=true node src/start.js",
+    "build": "./node_modules/.bin/babel src --out-dir sdk && rm -f sdk/start.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "decimal.js": "^10.2.0",
+    "event-emitter": "^0.3.5",
+    "koa": "^2.8.1",
+    "koa-bodyparser": "^4.2.1",
+    "lodash": "^4.17.15",
+    "log-update": "^3.3.0",
+    "log4js": "^5.1.0",
+    "moment": "^2.24.0",
+    "qs": "^6.9.0",
+    "querystring": "^0.2.0",
+    "request": "^2.88.0",
+    "socket.io": "^2.2.0",
+    "socket.io-client": "^2.2.0",
+    "socket.io-msgpack-parser": "^2.2.0",
+    "uuid": "^3.3.3",
+    "ws": "^7.1.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-plugin-add-module-exports": "^1.0.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.5",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "nodemon": "^1.19.2"
+  }
+}
